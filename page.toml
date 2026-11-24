@@ -1,0 +1,40 @@
+# DRAFT registry page (sunrise-mod-package page.rs). name, authors, homepage, issues and license come from
+# sunrise-mod.toml; the icon is the package's root icon.png. No category in registry/categories.toml applies
+# to the shaderpack kind yet, so there is no `categories` line.
+summary = "A galaxy night sky, volumetric clouds, mirrored water and coloured light, as a shaders/ pack."
+description = """
+A shader pack for [Sunrise](https://playsunrise.net) in the `shaders/` (Iris/OptiFine) format, based on [Hipped's Galaxie Shader](https://github.com/HippedPainter68/hippeds-galaxie-shader) by HippedPainter68 and ported by Joeypc6 from the tuned Sunrise WGSL version of the pack.
+
+What it does:
+
+- A night sky with a nebula, stars, planets and auroras in cold biomes, and rare sky events (eclipses, comets, second rainbows) rolled per world day.
+- Volumetric clouds with their own shadows and light shafts, haze that follows the biome, and distant sheet lightning in storms.
+- A mirrored water surface with waves, and rain that darkens the ground and fills reflecting puddles that dry afterwards.
+- Shadows, bloom and auto exposure; lava, soul torches and other sources colour what they light.
+- Every effect has an option on the Shader Options page.
+
+Install: drop `GalaxieShader.zip` into `shaderpacks/` and pick it on Options > Sunrise Settings > Extras > Sunrise Graphics > Shaders > Shader Packs.
+
+Needs a loader with `customTexture` (Sunrise, Iris); OptiFine does not read the pack's textures.
+
+Known engine gaps, fixed in Sunrise rather than in the pack:
+
+- [sunrise#5015](https://github.com/sunrise-org/sunrise/issues/5015): terrain gets no block ids, so block-keyed effects use their defaults.
+- [sunrise#5016](https://github.com/sunrise-org/sunrise/issues/5016): far water is drawn over far land.
+"""
+
+[[screenshots]]
+path = "page/night-galaxy.png"
+caption = "The nebula and stars over a savanna at night."
+
+[[screenshots]]
+path = "page/sunset.png"
+caption = "Sunset over a lake, with the pack's clouds."
+
+[[screenshots]]
+path = "page/shore.png"
+caption = "Mirrored water and a shipwreck at a lake shore in the morning."
+
+[[screenshots]]
+path = "page/lava-glow.png"
+caption = "Lava lighting the ground under the night sky."

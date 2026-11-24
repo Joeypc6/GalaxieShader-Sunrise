@@ -1,0 +1,21 @@
+# DRAFT for the registry's `shaderpack` kind. sunrise-mod.toml is the mod manifest
+# (docs/modding/src/reference/manifest.md); the SDK has no shader-pack manifest yet. See the notes at the end.
+id = "galaxie_shader"
+name = "Hipped´s Galaxie Shader"
+version = "1.0.0"
+description = "A galaxy night sky, volumetric clouds, mirrored water, puddles, shadows and coloured block light for Sunrise, in the shaders/ format. Needs a loader with customTexture (Sunrise, Iris)."
+authors = ["Joeypc6", "HippedPainter68"]
+license = "LicenseRef-PolyForm-Shield-1.0.0-Sunrise"
+license_url = "https://github.com/Joeypc6/GalaxieShader-Sunrise/blob/main/LICENSE.txt"
+homepage = "https://github.com/Joeypc6/GalaxieShader-Sunrise"
+issues = "https://github.com/Joeypc6/GalaxieShader-Sunrise/issues"
+side = "client"
+
+# What the tooling does with this for a shader pack (cargo-sunrise-mod at Sunrise main cca00ea0d9):
+# - There is no `kind` key; an unknown key refuses the manifest. Without [native], `release` and
+#   page.rs treat the package as kind "mod", so a project registered as `shaderpack` gets the
+#   "This release makes the project a mod" kind change (author_release.rs).
+# - Packing a folder into a .smod keeps only sunrise-mod.toml, icon.png, assets/ and data/:
+#   shaders/ is left out, so `release` would publish an empty content mod, not GalaxieShader.zip.
+# - icon.png (root, no manifest key) and the page checks work as for a mod; categories are
+#   checked against kind "mod" and no category in registry/categories.toml lists shaderpack.

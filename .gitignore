@@ -1,0 +1,19 @@
+# Built packs and tool output: releases attach the zip; it is made from shaders/, LICENSE.txt and README.md.
+*.zip
+*.smod
+*.sshader
+*.page.tar
+*.sigstore.json
+target/
+
+# Per-player option files the game writes beside a pack (shaderpacks/<pack>.txt).
+/GalaxieShader.txt
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
