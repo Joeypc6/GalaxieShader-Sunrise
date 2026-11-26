@@ -2,7 +2,7 @@
 # (docs/modding/src/reference/manifest.md); the SDK has no shader-pack manifest yet. See the notes at the end.
 id = "galaxie_shader"
 name = "Hipped´s Galaxie Shader"
-version = "1.0.0"
+version = "1.0.1"
 description = "A galaxy night sky, volumetric clouds, mirrored water, puddles, shadows and coloured block light for Sunrise, in the shaders/ format. Needs a loader with customTexture (Sunrise, Iris)."
 authors = ["Joeypc6", "HippedPainter68"]
 license = "LicenseRef-PolyForm-Shield-1.0.0-Sunrise"

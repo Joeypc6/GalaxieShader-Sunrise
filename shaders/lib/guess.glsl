@@ -29,4 +29,12 @@ int gs_guess_id(int id, vec4 avg, vec3 t, vec3 n, float block_light) {
     return id;
 }
 
+// Whether the loader hands terrain real block ids. A loader that does (Iris, Sunrise since sunrise#5015) also
+// fills at_midBlock, whose xyz (the vertex's offset to its block's middle, in 1/64 blocks) is never all zero; the
+// loaders that left ids out handed at_midBlock 0. With real ids, a block missing from block.properties is just an
+// ordinary block: guessing it would make grass blocks' tinted, cutout side overlay sway as leaves.
+bool gs_ids_present(vec4 mid_block) {
+    return any(greaterThan(abs(mid_block.xyz), vec3(0.01)));
+}
+
 #endif

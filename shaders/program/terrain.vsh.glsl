@@ -31,7 +31,8 @@ void main() {
     block_id = int(mc_Entity.x + 0.5);
     emission = clamp(at_midBlock.w / 15.0, 0.0, 1.0);
     world_normal = normalize(mat3(gbufferModelViewInverse) * normalize(gl_NormalMatrix * gl_Normal));
-    block_id = gs_guess_id(block_id, textureLod(gtexture, mc_midTexCoord.xy, 4.0), gl_Color.rgb, world_normal, light_level.x);
+    if (!gs_ids_present(at_midBlock))
+        block_id = gs_guess_id(block_id, textureLod(gtexture, mc_midTexCoord.xy, 4.0), gl_Color.rgb, world_normal, light_level.x);
     world_tangent = vec4(normalize(mat3(gbufferModelViewInverse) * (gl_NormalMatrix * at_tangent.xyz)),
         at_tangent.w < 0.0 ? -1.0 : 1.0);
 
