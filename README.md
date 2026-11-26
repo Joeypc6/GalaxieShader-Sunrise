@@ -40,8 +40,5 @@ format's programs (gbuffers, shadow, deferred, composite, final). Changed for th
 
 These are in Sunrise's `shaders/` loader, not in the pack; the pack looks right once they are fixed.
 
-- [sunrise-org/sunrise#5015](https://github.com/sunrise-org/sunrise/issues/5015): solid and cutout terrain gets
-  `mc_Entity` -1 and `at_midBlock` 0 for every block, so effects keyed to block ids (waving plants, emissive
-  blocks, per-block materials) fall back to their defaults.
 - [sunrise-org/sunrise#5016](https://github.com/sunrise-org/sunrise/issues/5016): distant terrain's water is drawn
   over its land, so far land can vanish behind opaque water.

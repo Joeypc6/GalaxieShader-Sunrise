@@ -19,7 +19,6 @@ Needs a loader with `customTexture` (Sunrise, Iris); OptiFine does not read the 
 
 Known engine gaps, fixed in Sunrise rather than in the pack:
 
-- [sunrise#5015](https://github.com/sunrise-org/sunrise/issues/5015): terrain gets no block ids, so block-keyed effects use their defaults.
 - [sunrise#5016](https://github.com/sunrise-org/sunrise/issues/5016): far water is drawn over far land.
 """
 
